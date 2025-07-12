@@ -14,7 +14,7 @@ interface ProductResponse {
 async function UseHookEx()  {
     const products: ProductResponse  = await fetch('https://dummyjson.com/products')
 .then(res => res.json())
-console.log(products)
+// console.log(products)
   return (
     <div>
             <h2>UseHook Example</h2>

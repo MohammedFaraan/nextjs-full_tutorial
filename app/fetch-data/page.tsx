@@ -1,5 +1,4 @@
-import { log } from 'console'
-import React from 'react'
+import React, { cache } from 'react'
 
 interface Product {
     id: number,
@@ -15,7 +14,7 @@ interface ProductResponse {
 async function ServerFetchDataEx()  {
     const products: ProductResponse  = await fetch('https://dummyjson.com/products')
 .then(res => res.json())
-console.log(products)
+// console.log(products)
   return (
     <div>
             <h2>ServerFetchDataEx</h2>
