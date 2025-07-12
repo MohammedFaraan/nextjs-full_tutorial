@@ -1,4 +1,3 @@
-import { log } from 'console'
 import React from 'react'
 
 interface Product {
@@ -12,13 +11,13 @@ interface ProductResponse {
     total: number
 }
 
-async function ServerFetchDataEx()  {
+async function UseHookEx()  {
     const products: ProductResponse  = await fetch('https://dummyjson.com/products')
 .then(res => res.json())
 console.log(products)
   return (
     <div>
-            <h2>ServerFetchDataEx</h2>
+            <h2>UseHook Example</h2>
             <ul>
                 {products.products.map((product) => (
                     <li key={product.id} >
@@ -31,4 +30,4 @@ console.log(products)
   )
 }
 
-export default ServerFetchDataEx
+export default UseHookEx
